@@ -1,0 +1,7 @@
+C:\Users\Артем\source\repos\crypto_lab1\crypto_lab1\x64\Debug\crypto_lab1.vcxproj.AssemblyReference.cache
+C:\Users\Артем\source\repos\crypto_lab1\crypto_lab1\x64\Debug\cryptolab1.MyForm.resources
+C:\Users\Артем\source\repos\crypto_lab1\crypto_lab1\x64\Debug\crypto_lab1.vcxproj.GenerateResource.cache
+C:\Users\Артем\source\repos\crypto_lab1\crypto_lab1\x64\Debug\crypto_lab1.vcxproj.ResolveComReference.cache
+C:\Users\Артем\Desktop\labs\КРИПТА\lab1\crypto_lab1\crypto_lab1\x64\Debug\crypto_lab1.vcxproj.AssemblyReference.cache
+C:\Users\Артем\Desktop\labs\КРИПТА\lab1\crypto_lab1\crypto_lab1\x64\Debug\cryptolab1.MyForm.resources
+C:\Users\Артем\Desktop\labs\КРИПТА\lab1\crypto_lab1\crypto_lab1\x64\Debug\crypto_lab1.vcxproj.GenerateResource.cache
