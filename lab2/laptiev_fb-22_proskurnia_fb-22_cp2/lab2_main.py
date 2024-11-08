@@ -62,7 +62,20 @@ def vigenere_encrypt(text, key):
     
     return encrypted_text
 
-        
+
+def freq(text):
+    freq_s = Counter(text)
+    length = len(text)
+    for i, j in freq_s.items():
+        freq_s[i] = j / length
+    return freq_s
+
+
+def decrypt(c, k) -> str:
+    i = (ALPHABET.find(c) - ALPHABET.find(k)) % len(ALPHABET)
+    return ALPHABET[i]        
+
+
 
 
 def main():
@@ -91,9 +104,28 @@ def main():
         collision_counts[i] = col_count
         print('collision count', col_count, '\n')
 
-    print({k: v for k, v in indexes.items() if v > 0.039})
-    print({k: v for k, v in collision_counts.items() if v > 220})
+    print('Top 5 indexes: ', dict(sorted(indexes.items(), key=lambda item: item[1], reverse=True)[:5]))
+    print('Top 5 collision counts:', dict(sorted(collision_counts.items(), key=lambda item: item[1], reverse=True)[:5]))
+    
+    print('o frequency:', freq(cipher_text)['о'])
 
+    key_len = 16
+    for i in range(key_len):
+        freq_s = freq(cipher_text[i::key_len])
+        print(f"Letter {i}:", list(freq_s.items())[:5])
+
+    keyfrag = ['тсй', 'у', 'шр', 'ц', 'л', 'хр', 'яцю', 'у', 'п', 'уц', 'юб', 'уыь', 'чаъ', 'ъ', 'к', 'ц']
+
+    with open("lab2/laptiev_fb-22_proskurnia_fb-22_cp2/keys.txt", "w", encoding='utf-8') as f:
+        def reqout(part, symbols):
+            if len(part) >= 14:
+                f.write(part + '\n')
+                return
+            mb = symbols[:1][0]
+            for i in mb:
+                i = decrypt(i, 'о')
+                reqout(part+i, symbols[1:])
+        reqout("", keyfrag)
 
 
 if __name__ == "__main__":
