@@ -42,6 +42,14 @@ def AffinityIndex(text):
     return _sum / (sum(symbols.values()) * (sum(symbols.values()) - 1))
 
 
+def count_repeated_letters(text, r):
+    count = 0
+    for i in range(len(text) - r):
+        if text[i] == text[i + r]:
+            count += 1
+    return count
+
+
 def vigenere_encrypt(text, key):
     encrypted_text = ''
     key_length = len(key)
@@ -73,11 +81,18 @@ def main():
         cipher_text = file.read()
 
     indexes = {}
+    collision_counts={}
     for i in range(1, 31):
         index = AffinityIndex(cipher_text[::i])
         indexes[i] = index
-        print(i,index)
+        print(f'r{i} ',index)
+
+        col_count = count_repeated_letters(cipher_text, i)
+        collision_counts[i] = col_count
+        print('collision count', col_count, '\n')
+
     print({k: v for k, v in indexes.items() if v > 0.039})
+    print({k: v for k, v in collision_counts.items() if v > 220})
 
 
 
