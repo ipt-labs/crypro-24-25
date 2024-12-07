@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Криптоаналіз</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #34495e;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            min-height: 150px;
+            margin-bottom: 10px;
+            font-family: monospace;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            min-width: 120px;
+        }
+
+        button.secondary {
+            background-color: #95a5a6;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        button:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        .result {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .analysis-log {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            max-height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .error {
+            color: #c0392b;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #e74c3c;
+            border-radius: 4px;
+            background-color: #fadbd8;
+            display: none;
+        }
+
+        .loading {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .key-info {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #edf7ff;
+            border-radius: 4px;
+        }
+
+        .decrypted-content {
+            margin-top: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .file-label:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Криптоаналіз афінного шифру</h1>
+        
+        <div class="button-group">
+            <label class="file-label" for="file-input">
+                Завантажити файл
+            </label>
+            <input type="file" id="file-input" accept=".txt">
+            <button onclick="clearAll()" class="secondary">Очистити все</button>
+        </div>
+
+        <div class="form-group">
+            <label for="encrypted-text">Введіть зашифрований текст:</label>
+            <textarea id="encrypted-text" placeholder="Вставте зашифрований текст тут..."></textarea>
+        </div>
+        
+        <div class="button-group">
+            <button onclick="analyzeText()" id="analyze-btn">Аналізувати</button>
+            <button onclick="saveResults()" id="save-btn" class="secondary" disabled>Зберегти результат</button>
+        </div>
+        
+        <div class="loading" id="loading">
+            Виконується аналіз... Це може зайняти кілька хвилин.
+        </div>
+        
+        <div class="error" id="error"></div>
+        
+        <div class="result" id="result">
+            <h3>Результати аналізу:</h3>
+            <div class="key-info" id="key-info"></div>
+            
+            <h4>Лог аналізу:</h4>
+            <div class="analysis-log" id="analysis-log"></div>
+            
+            <h4>Розшифрований текст:</h4>
+            <div class="decrypted-content" id="decrypted-text"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('file-input').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('encrypted-text').value = e.target.result;
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        function appendToLog(message) {
+            const log = document.getElementById('analysis-log');
+            log.textContent += message + '\n';
+            log.scrollTop = log.scrollHeight;
+        }
+
+        function clearAll() {
+            document.getElementById('encrypted-text').value = '';
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('error').style.display = 'none';
+            document.getElementById('analysis-log').textContent = '';
+            document.getElementById('save-btn').disabled = true;
+            document.getElementById('file-input').value = '';
+        }
+
+        function saveResults() {
+            const keyInfo = document.getElementById('key-info').textContent;
+            const decryptedText = document.getElementById('decrypted-text').textContent;
+            const log = document.getElementById('analysis-log').textContent;
+            
+            const content = `Результати криптоаналізу\n\n${keyInfo}\n\nЛог аналізу:\n${log}\n\nРозшифрований текст:\n${decryptedText}`;
+            
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'cryptanalysis_results.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        function analyzeText() {
+            const encryptedText = document.getElementById('encrypted-text').value;
+            const button = document.getElementById('analyze-btn');
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const result = document.getElementById('result');
+            const saveBtn = document.getElementById('save-btn');
+            
+            if (!encryptedText.trim()) {
+                error.textContent = 'Будь ласка, введіть текст для аналізу';
+                error.style.display = 'block';
+                return;
+            }
+            
+            button.disabled = true;
+            loading.style.display = 'block';
+            error.style.display = 'none';
+            result.style.display = 'none';
+            document.getElementById('analysis-log').textContent = '';
+            
+            fetch('/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text: encryptedText })
+            })
+            .then(response => response.json())
+            .then(data => {
+                loading.style.display = 'none';
+                button.disabled = false;
+                
+                if (data.error) {
+                    error.textContent = data.error;
+                    error.style.display = 'block';
+                    return;
+                }
+                
+                document.getElementById('key-info').textContent = 
+                    `Знайдений ключ: a = ${data.key.a}, b = ${data.key.b}`;
+                document.getElementById('decrypted-text').textContent = data.decrypted_text;
+                
+                if (data.logs) {
+                    data.logs.forEach(log => appendToLog(log));
+                }
+                
+                result.style.display = 'block';
+                saveBtn.disabled = false;
+            })
+            .catch(err => {
+                loading.style.display = 'none';
+                button.disabled = false;
+                error.textContent = 'Сталася помилка при аналізі тексту. Спробуйте ще раз.';
+                error.style.display = 'block';
+            });
+        }
+    </script>
+</body>
+</html>
