@@ -1,0 +1,896 @@
+
+rodion@rodion-Vivobook:~/СRYPT-GIT/lab2-files/ciphered$ python3 Crypto-lab2.1-index-calculator.py Dostoevskiy-cut.txt 1 ./ RU
+
+╔══════════════════════════════════════════════════════════╗
+║Viginere scipher Index Of Coincidence calculation program.║
+╚══════════════════════════════════════════════════════════╝
+Processing of single characters completed!
+TOTAL: 1450 characters
+
+Frequency and probability of single letters in text:
+    Frequency  Probability
+а         90     0.062069
+б         25     0.017241
+в         61     0.042069
+г         21     0.014483
+д         42     0.028966
+е        122     0.084138
+ё          0     0.000000
+ж         19     0.013103
+з         24     0.016552
+и        103     0.071034
+й         28     0.019310
+к         54     0.037241
+л         72     0.049655
+м         44     0.030345
+н        104     0.071724
+о        181     0.124828
+п         34     0.023448
+р         62     0.042759
+с         77     0.053103
+т         84     0.057931
+у         41     0.028276
+ф          2     0.001379
+х         18     0.012414
+ц          8     0.005517
+ч         22     0.015172
+ш          8     0.005517
+щ          6     0.004138
+ъ          0     0.000000
+ы         20     0.013793
+ь         23     0.015862
+э          6     0.004138
+ю         10     0.006897
+я         39     0.026897
+
+Processing of single characters completed!
+TOTAL: 1450 characters
+
+
+╔══════════════════════════════════════════════════════════╗
+║ Indices of Coincidence of the text                       ║
+║ "Dostoevskiy-cut.txt"                                    ║
+║ for Vigenere scipher period R == 1:                      ║
+║                                                          ║
+║ > Itxt == 0.05580829                                     ║
+║ > I0   == 0.05580829                                     ║
+╚══════════════════════════════════════════════════════════╝
+
+
+rodion@rodion-Vivobook:~/СRYPT-GIT/lab2-files/ciphered$ python3 Crypto-lab2.1-index-calculator.py 2/Dostoevskiy-cut-VIGENERE.txt 2 ./ RU
+
+╔══════════════════════════════════════════════════════════╗
+║Viginere scipher Index Of Coincidence calculation program.║
+╚══════════════════════════════════════════════════════════╝
+Processing of single characters completed!
+TOTAL: 1450 characters
+
+Frequency and probability of single letters in text:
+    Frequency  Probability
+а         52     0.035862
+б         29     0.020000
+в         16     0.011034
+г         15     0.010345
+д          8     0.005517
+е         20     0.013793
+ё          0     0.000000
+ж         14     0.009655
+з          4     0.002759
+и         18     0.012414
+й         28     0.019310
+к         49     0.033793
+л         18     0.012414
+м         58     0.040000
+н         56     0.038621
+о         33     0.022759
+п         87     0.060000
+р          8     0.005517
+с         29     0.020000
+т         70     0.048276
+у         58     0.040000
+ф         28     0.019310
+х         35     0.024138
+ц         90     0.062069
+ч         33     0.022759
+ш         90     0.062069
+щ        109     0.075172
+ъ         36     0.024828
+ы         78     0.053793
+ь        137     0.094483
+э         58     0.040000
+ю         47     0.032414
+я         39     0.026897
+
+Processing of single characters completed!
+TOTAL: 725 characters
+
+Processing of single characters completed!
+TOTAL: 725 characters
+
+
+╔══════════════════════════════════════════════════════════╗
+║ Indices of Coincidence of the text                       ║
+║ "2/Dostoevskiy-cut-VIGENERE.txt"                         ║
+║ for Vigenere scipher period R == 2:                      ║
+║                                                          ║
+║ > Itxt == 0.04561243                                     ║
+║ > I0   == 0.05626977                                     ║
+║ > I1   == 0.05570585                                     ║
+╚══════════════════════════════════════════════════════════╝
+
+
+rodion@rodion-Vivobook:~/СRYPT-GIT/lab2-files/ciphered$ python3 Crypto-lab2.1-index-calculator.py 3/Dostoevskiy-cut-VIGENERE.txt 3 ./ RU
+
+╔══════════════════════════════════════════════════════════╗
+║Viginere scipher Index Of Coincidence calculation program.║
+╚══════════════════════════════════════════════════════════╝
+Processing of single characters completed!
+TOTAL: 1450 characters
+
+Frequency and probability of single letters in text:
+    Frequency  Probability
+а         14     0.009655
+б         15     0.010345
+в          8     0.005517
+г          9     0.006207
+д         18     0.012414
+е         28     0.019310
+ё          0     0.000000
+ж         12     0.008276
+з         29     0.020000
+и         67     0.046207
+й         18     0.012414
+к         55     0.037931
+л         37     0.025517
+м         38     0.026207
+н         93     0.064138
+о          7     0.004828
+п         25     0.017241
+р         66     0.045517
+с         73     0.050345
+т         24     0.016552
+у         44     0.030345
+ф         73     0.050345
+х         41     0.028276
+ц         93     0.064138
+ч        145     0.100000
+ш         39     0.026897
+щ         69     0.047586
+ъ        119     0.082069
+ы         58     0.040000
+ь         49     0.033793
+э         24     0.016552
+ю         44     0.030345
+я         16     0.011034
+
+Processing of single characters completed!
+TOTAL: 484 characters
+
+Processing of single characters completed!
+TOTAL: 483 characters
+
+Processing of single characters completed!
+TOTAL: 483 characters
+
+
+╔══════════════════════════════════════════════════════════╗
+║ Indices of Coincidence of the text                       ║
+║ "3/Dostoevskiy-cut-VIGENERE.txt"                         ║
+║ for Vigenere scipher period R == 3:                      ║
+║                                                          ║
+║ > Itxt == 0.04713834                                     ║
+║ > I0   == 0.05324846                                     ║
+║ > I1   == 0.0578937                                      ║
+║ > I2   == 0.05706898                                     ║
+╚══════════════════════════════════════════════════════════╝
+
+
+rodion@rodion-Vivobook:~/СRYPT-GIT/lab2-files/ciphered$ python3 Crypto-lab2.1-index-calculator.py 4/Dostoevskiy-cut-VIGENERE.txt 4 ./ RU
+
+╔══════════════════════════════════════════════════════════╗
+║Viginere scipher Index Of Coincidence calculation program.║
+╚══════════════════════════════════════════════════════════╝
+Processing of single characters completed!
+TOTAL: 1450 characters
+
+Frequency and probability of single letters in text:
+    Frequency  Probability
+а         67     0.046207
+б         60     0.041379
+в         41     0.028276
+г         30     0.020690
+д         54     0.037241
+е         76     0.052414
+ё          0     0.000000
+ж          9     0.006207
+з         38     0.026207
+и         52     0.035862
+й         46     0.031724
+к         33     0.022759
+л         57     0.039310
+м         65     0.044828
+н         94     0.064828
+о         72     0.049655
+п         86     0.059310
+р         34     0.023448
+с         65     0.044828
+т         81     0.055862
+у         31     0.021379
+ф         19     0.013103
+х         15     0.010345
+ц         40     0.027586
+ч         20     0.013793
+ш         19     0.013103
+щ         21     0.014483
+ъ         14     0.009655
+ы         39     0.026897
+ь         64     0.044138
+э         26     0.017931
+ю         27     0.018621
+я         55     0.037931
+
+Processing of single characters completed!
+TOTAL: 363 characters
+
+Processing of single characters completed!
+TOTAL: 363 characters
+
+Processing of single characters completed!
+TOTAL: 362 characters
+
+Processing of single characters completed!
+TOTAL: 362 characters
+
+
+╔══════════════════════════════════════════════════════════╗
+║ Indices of Coincidence of the text                       ║
+║ "4/Dostoevskiy-cut-VIGENERE.txt"                         ║
+║ for Vigenere scipher period R == 4:                      ║
+║                                                          ║
+║ > Itxt == 0.03844268                                     ║
+║ > I0   == 0.0569076                                      ║
+║ > I1   == 0.05552258                                     ║
+║ > I2   == 0.05912061                                     ║
+║ > I3   == 0.05679436                                     ║
+╚══════════════════════════════════════════════════════════╝
+
+
+rodion@rodion-Vivobook:~/СRYPT-GIT/lab2-files/ciphered$ python3 Crypto-lab2.1-index-calculator.py 5/Dostoevskiy-cut-VIGENERE.txt 5 ./ RU
+
+╔══════════════════════════════════════════════════════════╗
+║Viginere scipher Index Of Coincidence calculation program.║
+╚══════════════════════════════════════════════════════════╝
+Processing of single characters completed!
+TOTAL: 1450 characters
+
+Frequency and probability of single letters in text:
+    Frequency  Probability
+а         57     0.039310
+б         75     0.051724
+в         39     0.026897
+г         23     0.015862
+д         34     0.023448
+е         62     0.042759
+ё          0     0.000000
+ж         20     0.013793
+з         19     0.013103
+и         14     0.009655
+й         30     0.020690
+к          7     0.004828
+л         19     0.013103
+м         29     0.020000
+н         40     0.027586
+о         46     0.031724
+п         31     0.021379
+р         51     0.035172
+с         49     0.033793
+т         66     0.045517
+у         78     0.053793
+ф         35     0.024138
+х         75     0.051724
+ц         33     0.022759
+ч         76     0.052414
+ш         41     0.028276
+щ         47     0.032414
+ъ         51     0.035172
+ы         76     0.052414
+ь         46     0.031724
+э         67     0.046207
+ю         54     0.037241
+я         60     0.041379
+
+Processing of single characters completed!
+TOTAL: 290 characters
+
+Processing of single characters completed!
+TOTAL: 290 characters
+
+Processing of single characters completed!
+TOTAL: 290 characters
+
+Processing of single characters completed!
+TOTAL: 290 characters
+
+Processing of single characters completed!
+TOTAL: 290 characters
+
+
+╔══════════════════════════════════════════════════════════╗
+║ Indices of Coincidence of the text                       ║
+║ "5/Dostoevskiy-cut-VIGENERE.txt"                         ║
+║ for Vigenere scipher period R == 5:                      ║
+║                                                          ║
+║ > Itxt == 0.03655506                                     ║
+║ > I0   == 0.05436105                                     ║
+║ > I1   == 0.06075647                                     ║
+║ > I2   == 0.05751104                                     ║
+║ > I3   == 0.05168834                                     ║
+║ > I4   == 0.06099511                                     ║
+╚══════════════════════════════════════════════════════════╝
+
+
+rodion@rodion-Vivobook:~/СRYPT-GIT/lab2-files/ciphered$ python3 Crypto-lab2.1-index-calculator.py 10/Dostoevskiy-cut-VIGENERE.txt 10 ./ RU
+
+╔══════════════════════════════════════════════════════════╗
+║Viginere scipher Index Of Coincidence calculation program.║
+╚══════════════════════════════════════════════════════════╝
+Processing of single characters completed!
+TOTAL: 1450 characters
+
+Frequency and probability of single letters in text:
+    Frequency  Probability
+а         44     0.030345
+б         43     0.029655
+в         52     0.035862
+г         54     0.037241
+д         45     0.031034
+е         85     0.058621
+ё          0     0.000000
+ж         52     0.035862
+з         29     0.020000
+и         29     0.020000
+й         30     0.020690
+к         55     0.037931
+л         39     0.026897
+м         35     0.024138
+н         76     0.052414
+о         36     0.024828
+п         39     0.026897
+р         52     0.035862
+с         54     0.037241
+т         68     0.046897
+у         36     0.024828
+ф         35     0.024138
+х         45     0.031034
+ц         49     0.033793
+ч         39     0.026897
+ш         38     0.026207
+щ         34     0.023448
+ъ         16     0.011034
+ы         47     0.032414
+ь         61     0.042069
+э         30     0.020690
+ю         36     0.024828
+я         67     0.046207
+
+Processing of single characters completed!
+TOTAL: 145 characters
+
+Processing of single characters completed!
+TOTAL: 145 characters
+
+Processing of single characters completed!
+TOTAL: 145 characters
+
+Processing of single characters completed!
+TOTAL: 145 characters
+
+Processing of single characters completed!
+TOTAL: 145 characters
+
+Processing of single characters completed!
+TOTAL: 145 characters
+
+Processing of single characters completed!
+TOTAL: 145 characters
+
+Processing of single characters completed!
+TOTAL: 145 characters
+
+Processing of single characters completed!
+TOTAL: 145 characters
+
+Processing of single characters completed!
+TOTAL: 145 characters
+
+
+╔══════════════════════════════════════════════════════════╗
+║ Indices of Coincidence of the text                       ║
+║ "10/Dostoevskiy-cut-VIGENERE.txt"                        ║
+║ for Vigenere scipher period R == 10:                     ║
+║                                                          ║
+║ > Itxt == 0.03381071                                     ║
+║ > I0   == 0.06235632                                     ║
+║ > I1   == 0.05938697                                     ║
+║ > I2   == 0.06111111                                     ║
+║ > I3   == 0.05268199                                     ║
+║ > I4   == 0.06609195                                     ║
+║ > I5   == 0.05708812                                     ║
+║ > I6   == 0.05890805                                     ║
+║ > I7   == 0.05517241                                     ║
+║ > I8   == 0.04961686                                     ║
+║ > I9   == 0.05929119                                     ║
+╚══════════════════════════════════════════════════════════╝
+
+
+rodion@rodion-Vivobook:~/СRYPT-GIT/lab2-files/ciphered$ python3 Crypto-lab2.1-index-calculator.py 12/Dostoevskiy-cut-VIGENERE.txt 12 ./ RU
+
+╔══════════════════════════════════════════════════════════╗
+║Viginere scipher Index Of Coincidence calculation program.║
+╚══════════════════════════════════════════════════════════╝
+Processing of single characters completed!
+TOTAL: 1450 characters
+
+Frequency and probability of single letters in text:
+    Frequency  Probability
+а         50     0.034483
+б         66     0.045517
+в         31     0.021379
+г         25     0.017241
+д         40     0.027586
+е         43     0.029655
+ё          0     0.000000
+ж         28     0.019310
+з         29     0.020000
+и         25     0.017241
+й         49     0.033793
+к         53     0.036552
+л         20     0.013793
+м         55     0.037931
+н         55     0.037931
+о         41     0.028276
+п         36     0.024828
+р         76     0.052414
+с         46     0.031724
+т         52     0.035862
+у         73     0.050345
+ф         40     0.027586
+х         50     0.034483
+ц         70     0.048276
+ч         48     0.033103
+ш         28     0.019310
+щ         48     0.033103
+ъ         51     0.035172
+ы         35     0.024138
+ь         41     0.028276
+э         52     0.035862
+ю         40     0.027586
+я         54     0.037241
+
+Processing of single characters completed!
+TOTAL: 121 characters
+
+Processing of single characters completed!
+TOTAL: 121 characters
+
+Processing of single characters completed!
+TOTAL: 121 characters
+
+Processing of single characters completed!
+TOTAL: 121 characters
+
+Processing of single characters completed!
+TOTAL: 121 characters
+
+Processing of single characters completed!
+TOTAL: 121 characters
+
+Processing of single characters completed!
+TOTAL: 121 characters
+
+Processing of single characters completed!
+TOTAL: 121 characters
+
+Processing of single characters completed!
+TOTAL: 121 characters
+
+Processing of single characters completed!
+TOTAL: 121 characters
+
+Processing of single characters completed!
+TOTAL: 120 characters
+
+Processing of single characters completed!
+TOTAL: 120 characters
+
+
+╔══════════════════════════════════════════════════════════╗
+║ Indices of Coincidence of the text                       ║
+║ "12/Dostoevskiy-cut-VIGENERE.txt"                        ║
+║ for Vigenere scipher period R == 12:                     ║
+║                                                          ║
+║ > Itxt == 0.03349373                                     ║
+║ > I0   == 0.04435262                                     ║
+║ > I1   == 0.05151515                                     ║
+║ > I2   == 0.04903581                                     ║
+║ > I3   == 0.05247934                                     ║
+║ > I4   == 0.05413223                                     ║
+║ > I5   == 0.05454545                                     ║
+║ > I6   == 0.05757576                                     ║
+║ > I7   == 0.05385675                                     ║
+║ > I8   == 0.06294766                                     ║
+║ > I9   == 0.05730028                                     ║
+║ > I10  == 0.07086835                                     ║
+║ > I11  == 0.06162465                                     ║
+╚══════════════════════════════════════════════════════════╝
+
+
+rodion@rodion-Vivobook:~/СRYPT-GIT/lab2-files/ciphered$ python3 Crypto-lab2.1-index-calculator.py 15/Dostoevskiy-cut-VIGENERE.txt 15 ./ RU
+
+╔══════════════════════════════════════════════════════════╗
+║Viginere scipher Index Of Coincidence calculation program.║
+╚══════════════════════════════════════════════════════════╝
+Processing of single characters completed!
+TOTAL: 1450 characters
+
+Frequency and probability of single letters in text:
+    Frequency  Probability
+а         47     0.032414
+б         50     0.034483
+в         47     0.032414
+г         26     0.017931
+д         37     0.025517
+е         75     0.051724
+ё          0     0.000000
+ж         29     0.020000
+з         15     0.010345
+и         40     0.027586
+й         42     0.028966
+к         52     0.035862
+л         28     0.019310
+м         46     0.031724
+н         61     0.042069
+о         45     0.031034
+п         53     0.036552
+р         51     0.035172
+с         47     0.032414
+т         64     0.044138
+у         47     0.032414
+ф         38     0.026207
+х         42     0.028966
+ц         36     0.024828
+ч         43     0.029655
+ш         50     0.034483
+щ         62     0.042759
+ъ         30     0.020690
+ы         50     0.034483
+ь         62     0.042759
+э         52     0.035862
+ю         40     0.027586
+я         43     0.029655
+
+Processing of single characters completed!
+TOTAL: 97 characters
+
+Processing of single characters completed!
+TOTAL: 97 characters
+
+Processing of single characters completed!
+TOTAL: 97 characters
+
+Processing of single characters completed!
+TOTAL: 97 characters
+
+Processing of single characters completed!
+TOTAL: 97 characters
+
+Processing of single characters completed!
+TOTAL: 97 characters
+
+Processing of single characters completed!
+TOTAL: 97 characters
+
+Processing of single characters completed!
+TOTAL: 97 characters
+
+Processing of single characters completed!
+TOTAL: 97 characters
+
+Processing of single characters completed!
+TOTAL: 97 characters
+
+Processing of single characters completed!
+TOTAL: 96 characters
+
+Processing of single characters completed!
+TOTAL: 96 characters
+
+Processing of single characters completed!
+TOTAL: 96 characters
+
+Processing of single characters completed!
+TOTAL: 96 characters
+
+Processing of single characters completed!
+TOTAL: 96 characters
+
+
+╔══════════════════════════════════════════════════════════╗
+║ Indices of Coincidence of the text                       ║
+║ "15/Dostoevskiy-cut-VIGENERE.txt"                        ║
+║ for Vigenere scipher period R == 15:                     ║
+║                                                          ║
+║ > Itxt == 0.03281026                                     ║
+║ > I0   == 0.0524055                                      ║
+║ > I1   == 0.0818299                                      ║
+║ > I2   == 0.08097079                                     ║
+║ > I3   == 0.04510309                                     ║
+║ > I4   == 0.07001718                                     ║
+║ > I5   == 0.05004296                                     ║
+║ > I6   == 0.06829897                                     ║
+║ > I7   == 0.04123711                                     ║
+║ > I8   == 0.05390893                                     ║
+║ > I9   == 0.06121134                                     ║
+║ > I10  == 0.06776316                                     ║
+║ > I11  == 0.05723684                                     ║
+║ > I12  == 0.04736842                                     ║
+║ > I13  == 0.06074561                                     ║
+║ > I14  == 0.05767544                                     ║
+╚══════════════════════════════════════════════════════════╝
+
+
+rodion@rodion-Vivobook:~/СRYPT-GIT/lab2-files/ciphered$ python3 Crypto-lab2.1-index-calculator.py 17/Dostoevskiy-cut-VIGENERE.txt 17 ./ RU
+
+╔══════════════════════════════════════════════════════════╗
+║Viginere scipher Index Of Coincidence calculation program.║
+╚══════════════════════════════════════════════════════════╝
+Processing of single characters completed!
+TOTAL: 1450 characters
+
+Frequency and probability of single letters in text:
+    Frequency  Probability
+а         54     0.037241
+б         31     0.021379
+в         42     0.028966
+г         36     0.024828
+д         58     0.040000
+е         64     0.044138
+ё          0     0.000000
+ж         37     0.025517
+з         33     0.022759
+и         46     0.031724
+й         42     0.028966
+к         25     0.017241
+л         26     0.017931
+м         39     0.026897
+н         57     0.039310
+о         30     0.020690
+п         44     0.030345
+р         45     0.031034
+с         53     0.036552
+т         38     0.026207
+у         67     0.046207
+ф         49     0.033793
+х         38     0.026207
+ц         51     0.035172
+ч         82     0.056552
+ш         36     0.024828
+щ         33     0.022759
+ъ         56     0.038621
+ы         52     0.035862
+ь         44     0.030345
+э         50     0.034483
+ю         50     0.034483
+я         42     0.028966
+
+Processing of single characters completed!
+TOTAL: 86 characters
+
+Processing of single characters completed!
+TOTAL: 86 characters
+
+Processing of single characters completed!
+TOTAL: 86 characters
+
+Processing of single characters completed!
+TOTAL: 86 characters
+
+Processing of single characters completed!
+TOTAL: 86 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+Processing of single characters completed!
+TOTAL: 85 characters
+
+
+╔══════════════════════════════════════════════════════════╗
+║ Indices of Coincidence of the text                       ║
+║ "17/Dostoevskiy-cut-VIGENERE.txt"                        ║
+║ for Vigenere scipher period R == 17:                     ║
+║                                                          ║
+║ > Itxt == 0.03286642                                     ║
+║ > I0   == 0.04076607                                     ║
+║ > I1   == 0.07332421                                     ║
+║ > I2   == 0.05882353                                     ║
+║ > I3   == 0.07824897                                     ║
+║ > I4   == 0.07086183                                     ║
+║ > I5   == 0.0464986                                      ║
+║ > I6   == 0.06666667                                     ║
+║ > I7   == 0.05210084                                     ║
+║ > I8   == 0.05742297                                     ║
+║ > I9   == 0.05070028                                     ║
+║ > I10  == 0.05938375                                     ║
+║ > I11  == 0.04957983                                     ║
+║ > I12  == 0.04985994                                     ║
+║ > I13  == 0.05826331                                     ║
+║ > I14  == 0.0697479                                      ║
+║ > I15  == 0.05882353                                     ║
+║ > I16  == 0.05966387                                     ║
+╚══════════════════════════════════════════════════════════╝
+
+
+rodion@rodion-Vivobook:~/СRYPT-GIT/lab2-files/ciphered$ python3 Crypto-lab2.1-index-calculator.py 20/Dostoevskiy-cut-VIGENERE.txt 20 ./ RU
+
+╔══════════════════════════════════════════════════════════╗
+║Viginere scipher Index Of Coincidence calculation program.║
+╚══════════════════════════════════════════════════════════╝
+Processing of single characters completed!
+TOTAL: 1450 characters
+
+Frequency and probability of single letters in text:
+    Frequency  Probability
+а         57     0.039310
+б         69     0.047586
+в         43     0.029655
+г         42     0.028966
+д         32     0.022069
+е         83     0.057241
+ё          0     0.000000
+ж         23     0.015862
+з         16     0.011034
+и         39     0.026897
+й         27     0.018621
+к         34     0.023448
+л         38     0.026207
+м         33     0.022759
+н         53     0.036552
+о         76     0.052414
+п         65     0.044828
+р         68     0.046897
+с         52     0.035862
+т         65     0.044828
+у         59     0.040690
+ф         20     0.013793
+х         30     0.020690
+ц         34     0.023448
+ч         46     0.031724
+ш         21     0.014483
+щ         44     0.030345
+ъ         26     0.017931
+ы         34     0.023448
+ь         53     0.036552
+э         56     0.038621
+ю         49     0.033793
+я         63     0.043448
+
+Processing of single characters completed!
+TOTAL: 73 characters
+
+Processing of single characters completed!
+TOTAL: 73 characters
+
+Processing of single characters completed!
+TOTAL: 73 characters
+
+Processing of single characters completed!
+TOTAL: 73 characters
+
+Processing of single characters completed!
+TOTAL: 73 characters
+
+Processing of single characters completed!
+TOTAL: 73 characters
+
+Processing of single characters completed!
+TOTAL: 73 characters
+
+Processing of single characters completed!
+TOTAL: 73 characters
+
+Processing of single characters completed!
+TOTAL: 73 characters
+
+Processing of single characters completed!
+TOTAL: 73 characters
+
+Processing of single characters completed!
+TOTAL: 72 characters
+
+Processing of single characters completed!
+TOTAL: 72 characters
+
+Processing of single characters completed!
+TOTAL: 72 characters
+
+Processing of single characters completed!
+TOTAL: 72 characters
+
+Processing of single characters completed!
+TOTAL: 72 characters
+
+Processing of single characters completed!
+TOTAL: 72 characters
+
+Processing of single characters completed!
+TOTAL: 72 characters
+
+Processing of single characters completed!
+TOTAL: 72 characters
+
+Processing of single characters completed!
+TOTAL: 72 characters
+
+Processing of single characters completed!
+TOTAL: 72 characters
+
+
+╔══════════════════════════════════════════════════════════╗
+║ Indices of Coincidence of the text                       ║
+║ "20/Dostoevskiy-cut-VIGENERE.txt"                        ║
+║ for Vigenere scipher period R == 20:                     ║
+║                                                          ║
+║ > Itxt == 0.0351015                                      ║
+║ > I0   == 0.04984779                                     ║
+║ > I1   == 0.06126332                                     ║
+║ > I2   == 0.05669711                                     ║
+║ > I3   == 0.05898021                                     ║
+║ > I4   == 0.06697108                                     ║
+║ > I5   == 0.04908676                                     ║
+║ > I6   == 0.05783866                                     ║
+║ > I7   == 0.06050228                                     ║
+║ > I8   == 0.04908676                                     ║
+║ > I9   == 0.07229833                                     ║
+║ > I10  == 0.05555556                                     ║
+║ > I11  == 0.05946792                                     ║
+║ > I12  == 0.0571205                                      ║
+║ > I13  == 0.0571205                                      ║
+║ > I14  == 0.05242567                                     ║
+║ > I15  == 0.06103286                                     ║
+║ > I16  == 0.06259781                                     ║
+║ > I17  == 0.05320814                                     ║
+║ > I18  == 0.0614241                                      ║
+║ > I19  == 0.04225352                                     ║
+╚══════════════════════════════════════════════════════════╝
+
