@@ -146,4 +146,3 @@ bigrams2csv(chk_alph + ' ', cross_bigrams_g, "Table2_cross_bigrams_g.csv")
 bigrams2csv(chk_alph, cross_bigrams, "Table2_cross_bigrams.csv")
 bigrams2csv(chk_alph + ' ', bigrams_g, "Table2_bigrams_g.csv")
 bigrams2csv(chk_alph, bigrams, "Table2_bigrams.csv")
-
