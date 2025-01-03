@@ -1,6 +1,5 @@
 import re
-import pandas as pd
-from collections import Counter, defaultdict
+from collections import Counter
 from math import log
 
 def read_txt_file(path):

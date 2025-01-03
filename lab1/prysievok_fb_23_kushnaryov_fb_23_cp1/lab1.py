@@ -35,7 +35,7 @@ def calc_char_frequencies(text, sort_by_value=False):
 
 def print_char_frequencies(char_frequencies):
     for key, value in char_frequencies.items():
-        print(f"{value}")
+        print(f"'{key}': {value}")
 
 def calc_bigram_frequencies(bigrams):
     bigrams_count = len(bigrams)
@@ -49,6 +49,22 @@ def calc_bigram_frequencies(bigrams):
     for first_char, inner_dict in count_matrix.items():
         frequency_matrix[first_char] = {second_char: count/bigrams_count for second_char, count in inner_dict.items()}
     return frequency_matrix
+
+def get_top_n_bigrams(bigrams, n):
+    frequency_matrix = calc_bigram_frequencies(bigrams)
+
+    # Flatten the frequency matrix into a list of tuples: ((first, second), frequency)
+    bigram_frequencies = [
+        (f"{first_char}{second_char}", frequency)  # Combine the bigram as a single string
+        for first_char, inner_dict in frequency_matrix.items()
+        for second_char, frequency in inner_dict.items()
+    ]
+
+    # Sort by frequency in descending order
+    sorted_bigrams = sorted(bigram_frequencies, key=lambda x: x[1], reverse=True)
+
+    # Take the top n and return as a dictionary
+    return dict(sorted_bigrams[:n])
 
 def print_bigram_frequency_matrix(frequency_matrix):
     sorted_matrix = dict(sorted(frequency_matrix.items()))
@@ -166,4 +182,14 @@ def do_lab1():
 
     save_bigram_frequency_matrices_to_excel("aboba.xlsx", matrices_to_write)
 
-do_lab1()
+if __name__ == "__main__":
+    # do_lab1()
+    text_path = 'lab1/prysievok_fb_23_kushnaryov_fb_23_cp1/alice.txt'
+
+    raw_text = read_txt_file(text_path)
+    text = clean_text(raw_text)
+    text_no_spaces = clean_text_no_spaces(raw_text)
+    print('no spaces')
+    print(get_top_n_bigrams(get_bigrams_no_overlap(text_no_spaces),5))
+    print('with spaces')
+    print(get_top_n_bigrams(get_bigrams_no_overlap(text),5))
