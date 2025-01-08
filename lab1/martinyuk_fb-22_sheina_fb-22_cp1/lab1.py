@@ -62,8 +62,9 @@ def create_bigram_df(bigram_freq, charset):
     return bigram_df.rename(index={" ": "space"}, columns={" ": "space"}) if " " in bigram_df.index else bigram_df
 
 # Функції для обчислення ентропії
-def compute_entropy(freq_dict):
-    return -sum(freq * math.log2(freq) for freq in freq_dict.values() if freq > 0)
+def compute_entropy(freq_dict, n=2):
+    entropy = -sum(freq * math.log2(freq) for freq in freq_dict.values() if freq > 0)
+    return entropy / n
 
 # Функція для обчислення надлишковості
 def compute_redundancy(h, charset):
@@ -111,15 +112,15 @@ def main():
     bigram_df_nonoverlap_space.to_excel("nonoverlap_bigram_with_space.xlsx")
 
     # Ентропія
-    h1_no_space = compute_entropy(freq_no_space)
-    h1_with_space = compute_entropy(freq_with_space)
+    h1_no_space = compute_entropy(freq_no_space, n=1)
+    h1_with_space = compute_entropy(freq_with_space, n=1)
     print(f"Ентропія H1 для тексту без пробілів: {h1_no_space}")
     print(f"Ентропія H1 для тексту з пробілами: {h1_with_space}")
 
-    h2_overlap = compute_entropy(bigram_freq_overlap)
-    h2_overlap_space = compute_entropy(bigram_freq_overlap_space)
-    h2_nonoverlap = compute_entropy(bigram_freq_nonoverlap)
-    h2_nonoverlap_space = compute_entropy(bigram_freq_nonoverlap_space)
+    h2_overlap = compute_entropy(bigram_freq_overlap, n=2)
+    h2_overlap_space = compute_entropy(bigram_freq_overlap_space, n=2)
+    h2_nonoverlap = compute_entropy(bigram_freq_nonoverlap, n=2)
+    h2_nonoverlap_space = compute_entropy(bigram_freq_nonoverlap_space, n=2)
 
     print(f"Ентропія H2 для пересічних біграм (без пробілів): {h2_overlap}")
     print(f"Ентропія H2 для пересічних біграм (з пробілами): {h2_overlap_space}")
