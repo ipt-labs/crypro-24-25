@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from collections import Counter
 
 def index_of_coincidence(text):
@@ -58,7 +58,7 @@ for length, ic in ic_encrypted_texts.items():
 # Побудова гістограми
 keys_lengths = ['Відкритий текст'] + [str(length) for length in ic_encrypted_texts.keys()]
 ic_values = [ic_open_text] + list(ic_encrypted_texts.values())
-
+'''
 plt.figure(figsize=(10, 6))
 plt.bar(keys_lengths, ic_values, width=0.6)
 plt.title("Індекси відповідності для відкритого тексту та шифротекстів")
@@ -67,4 +67,4 @@ plt.ylabel("Індекс відповідності (IC)")
 plt.xticks(rotation=45)
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.tight_layout()
-plt.show()
+plt.show()'''
