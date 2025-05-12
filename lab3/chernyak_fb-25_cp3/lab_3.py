@@ -95,9 +95,11 @@ def main():
     ciphertext = read_text("./05_utf8.txt")
     print(f"Шифртекст: {ciphertext}")
 
-    ct = ["вн", "тн", "дк", "хщ", "ун"]
-    vt = ["ст", "но", "то", "на", "ен"]
+    top5_bigrams = top_bigrams(ciphertext)
+    print(f"Топ-5 біграм шифротексту: {top5_bigrams}")
 
+    ct = [bigram for bigram, _ in top5_bigrams]
+    vt = ["ст", "но", "то", "на", "ен"]
     keys = find_keys(ct, vt)
 
     forbidden_bigrams = ["аь", "юь", "еь", "оь"]
@@ -110,7 +112,8 @@ def main():
                 print(f"Топ-5 біграм: {top_5}")
         except ValueError:
             continue
-
+    print(f"Кількість знайдених ключів: {len(keys)}")
+    print(list(keys))
 
 if __name__ == "__main__":
     main()
