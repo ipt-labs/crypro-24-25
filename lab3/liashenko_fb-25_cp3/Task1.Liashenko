@@ -1,0 +1,55 @@
+def gcd_extended(a, b):
+    if a == 0:
+        return b, 0, 1
+    gcd, x1, y1 = gcd_extended(b % a, a)
+    x = y1 - (b // a) * x1
+    y = x1
+    return gcd, x, y
+
+def modular_inverse(a, m):
+    gcd, x, _ = gcd_extended(a, m)
+    if gcd != 1:
+        return None  
+    return x % m
+
+def solve_linear_congruence(a, b, m):
+    gcd, x, _ = gcd_extended(a, m)
+    if b % gcd != 0:
+        return []  
+
+
+    a1 = a // gcd
+    b1 = b // gcd
+    m1 = m // gcd
+
+
+    x0 = (x * b1) % m1
+
+
+    solutions = [(x0 + i * m1) % m for i in range(gcd)]
+    return solutions
+
+if __name__ == "__main__":
+    print("Введіть значення для a, b, m:")
+    try:
+        a = int(input("a: "))
+        b = int(input("b: "))
+        m = int(input("m: "))
+    except ValueError:
+        print("Помилка: введіть коректні цілі числа.")
+        exit()
+
+
+    inv = modular_inverse(a, m)
+    if inv is None:
+        print(f"Обернений елемент для {a} за модулем {m} не існує.")
+    else:
+        print(f"Обернений елемент для {a} за модулем {m}: {inv}")
+
+
+    solutions = solve_linear_congruence(a, b, m)
+    if solutions:
+        print(f"Розв’язки порівняння {a}x ≡ {b} (mod {m}): {solutions}")
+    else:
+        print(f"Розв’язків для {a}x ≡ {b} (mod {m}) не існує.")
+
